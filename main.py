@@ -27,8 +27,6 @@ def carve_files(disk_image_path):
             start_pos = data.find(header, start_pos)
             if start_pos == -1:
                 break
-
-            # Search for the corresponding footer starting from the header position
             end_pos = data.find(footer, start_pos)
             
             if end_pos != -1:
@@ -68,3 +66,4 @@ if __name__ == "__main__":
     image_input = input("Enter the path to the binary file (e.g., test_disk.bin): ")
 
     carve_files(image_input)
+
